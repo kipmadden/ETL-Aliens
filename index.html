@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>UAP Home</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Resources/funpix/favicon.ico">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<!--Body-->
+
+<body>
+
+  <!-- Navbar -->
+  <div class="fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!--Rufio Icon
+      <img src="Resources/funpix/bird_sun_conure2_1200.png" width="40" height="40"
+      class="d-inline-block align-top" alt="rufio">
+      -->
+      <!--over9k Icon-->
+      <img src="Resources/funpix/ufo.png" width="60" height="40" class="d-inline-block align-top" alt="rufio">
+      <a class="navbar-brand" href="index.html">Unidentified Aerial Phenomena</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="http://www.nuforc.org/webreports/ndxevent.html" target="_blank">Original Data
+              Source</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="jupyter.html">Jupyter Notebook</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">Interactive Dashboard</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/seankda/ETL-Aliens" target="_blank">Github</a>
+          </li>
+
+          <li class="nav-item dropdown">
+
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Project Members
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="https://github.com/kipmadden" target="_blank">Kip Madden</a>
+              <a class="dropdown-item" href="https://github.com/lpwestlake" target="_blank">Lance Westlake</a>
+              <a class="dropdown-item" href="https://github.com/nnhamoinesu22" target="_blank">Nyarai Nhamoinesu</a>
+              <a class="dropdown-item" href="https://github.com/seankda" target="_blank">Sean Del Alcazar</a>
+            </div>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+  </div>
+  <!--Navbar End-->
+
+  <!--Parallax 1-->
+  <div class="parallax"></div>
+
+  <!-- Scroll down caption -->
+  <div class="caption">
+    <span class="border">SCROLL DOWN</span>
+  </div>
+
+
+  <div class="container">
+
+    <div style="height:45%;background-color:white;font-size:30px;padding-left: 20px;">
+      <br>
+      <center>
+        <h1>Purpose</h1>
+      </center><br>
+      <p>Insert purpose here</p><br>
+
+    </div>
+
+  </div>
+
+  <!--Parallax 2-->
+  <div class="parallax2"></div>
+
+  <div class="container">
+    <div style="height:45%;background-color:white;font-size:30px;padding-left: 20px;">
+      <br>
+      <center>
+        <h1>Extract</h1>
+      </center><br>
+      <ul>
+        <li>
+          <p>Extract UAP reports from the <a href="http://www.nuforc.org/webreports/ndxevent.html"
+              target="_blank">National UFO Reporting Center
+            </a> by using Beautiful Soup</p>
+        </li>
+        <li>
+          <p>Scrape a list of <a href="https://en.wikipedia.org/wiki/List_of_nuclear_power_stations" target="_blank">
+              nuclear power stations </a>from Wikipedia, this time by using Panda's pd.read_html function!</p>
+        </li>
+        <li>
+          <p></p>
+        </li>
+        <li>
+          <p></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- 3rd Parallax -->
+  <div class="parallax3"></div>
+
+  <div class="container">
+    <div style="height:45%;background-color:white;font-size:30px;padding-left: 20px;">
+      <br>
+      <center>
+        <h1>Transform</h1>
+      </center><br>
+      <ul>
+        <li>
+          <p>From the UAP dataset extracted with Beautiful Soup, remove duplicates if any, dropped unneeded columns,
+            filtered out any locations not in the US.</p>
+        </li>
+        <li>
+          <p>Pass the dataset's city and state over to Google's geocode API in order to retrieve Lat and Long
+            coordinates</p>
+        </li>
+        <li>
+          <p></p>
+        </li>
+    </div>
+  </div>
+
+  <!-- 4th Parallax -->
+  <div class="parallax4"></div>
+
+  <div class="container">
+    <div style="height:45%;background-color:white;font-size:30px;padding-left: 20px;">
+      <br>
+      <center>
+        <h1>Load</h1>
+      </center><br>
+      <ul>
+        <li>
+          <p>Used Postgres to create a db (aliens_db)</p>
+        </li>
+        <li>
+          <p>Use Pandas to load converted csvs to dataframes into the db.
+            (tables: aliens_sighting, us_nuclear_sites, military_bases)
+          </p>
+        </li>
+        <li>
+          <p></p>
+      </ul>
+    </div>
+  </div>
+
+
+  <!--Parallax End-->
+
+  <!-- Optional JavaScript -->
+  <script type="text/javascript" charset="utf-8" src="js/script.js"></script>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>
